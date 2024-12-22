@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2997/2997154.svg">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500&display=swap" rel="stylesheet">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+  </script>
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/685d267bff.js" crossorigin="anonymous"></script>
+  <!-- My css -->
+  <link rel="stylesheet" href="css/Cards.css">
+  <title>I Love You</title>
+
+  <!-- Webhook Zapier Integration -->
+  <script>
+    // URL webhook Zapier Anda
+    const webhookURL = "https://hooks.zapier.com/hooks/catch/20077169/2hmnanx/";
+
+    // Fungsi untuk mengirimkan permintaan POST ke webhook Zapier
+    function sendToZapier() {
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          url: window.location.href,
+          timestamp: new Date().toISOString()
+        })
+      })
+      .then(response => response.text())
+      .then(data => console.log('Webhook triggered successfully:', data))
+      .catch(error => console.error('Error triggering webhook:', error));
+    }
+
+    // Panggil fungsi ini saat halaman dimuat
+    window.onload = function() {
+      sendToZapier();
+    };
+  </script>
+  <!-- End Webhook Zapier Integration -->
+
+</head>
+
+<body>
+  <h1>Kerandoman Alfira</h1>
+  <div class="container first">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card mrg c1">
+          <video class="card-img-top" id="vid-1" alt="img">
+            <source type="video/mp4" src="Images/Shovalit/vid1.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Perkara Cek Goldie</h5>
+            <p class="card-text">Katanya udah ke<br> tap 2x, terus mau <br>ngecek goldie padahal<br>bisa di cek dimanapun</p>
+            <a class="btn btn-primary btn-1" id="btn-1" onclick="playPauseVid('vid-1')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card mrg c2">
+          <video class="card-img-top" id="vid-2" alt="img">
+            <source type="video/mp4" src="Images/Shovalit/vid2.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Dengerin Orang PDKT</h5>
+            <p class="card-text">Dengerin mba mba dan<br> mas mas bahas UTBK, katanya<br>goals dia belajar <br>sampai mimisan</p>
+           <a class="btn btn-primary btn-2" id="btn-2" onclick="playPauseVid('vid-2')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card mrg mrg3">
+          <video class="card-img-top" id="vid-3" alt="img" poster="Images/Shovalit/vid3.mp4">
+            <source type="video/mp4" src="Images/Shovalit/vid3.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Emot Keramat 2</h5>
+            <p class="card-text">Nyenyenyenye<br> Nyenyenyenye<br>Nyenyenyenye<br>Nyenyenyenye</p>
+            <a class="btn btn-primary btn-3" id="btn-3" onclick="playPauseVid('vid-3')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card no-mrg c4">
+          <video class="card-img-top" id="vid-4" alt="img">
+            <source type="video/mp4" src="Images/Shovalit/vid4.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Duo Blonde</h5>
+            <p class="card-text">Jujur ini aku jijik<br>banget sama rambutku<br>ternyata bener seperti<br>jamet, tp klo km bagus2 ajh</p>
+            <a class="btn btn-primary btn-4" id="btn-4" onclick="playPauseVid('vid-4')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card no-mrg c5 num-5">
+          <video class="card-img-top" id="vid-5" alt="img">
+            <source type="video/mp4" src="Images/Shovalit/vid5.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Addict</h5>
+            <p class="card-text">Addictnya sampai punya<br>pacar diangurin mana<br> seriuss bangaat muka<br>diaaa wkwkwkwk<br>#bercanda sayang mwa</p>
+            <a class="btn btn-primary btn-5" id="btn-5" onclick="playPauseVid('vid-5')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card no-mrg num-6">
+          <video class="card-img-top" id="vid-6" alt="img">
+            <source type="video/mp4" src="Images/Shovalit/vid6.mp4">
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Sambat</h5>
+            <p class="card-text">Ceritanya km lg sambat<br>padahal ak gasalah<br>km nya saja yang<br>tidakk bersyukuur sayaang<br>hehehehehehhehe</p>
+            <a class="btn btn-primary btn-6" id="btn-6" onclick="playPauseVid('vid-6')"><img src="Images/sound-waves32.png" alt="play"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <div class="text-center mt-4">
+    <a href="BirthdayBlessing.html" class="btn btn-secondary">Back</a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="JS/Cards.js" charset="utf-8"></script>
+  <script>
+    function playPauseVid(vidId) {
+      var vid = document.getElementById(vidId);
+      if (vid.paused) {
+        vid.play();
+      } else {
+        vid.pause();
+      }
+    }
+  </script>
+</body>
+
+</html>

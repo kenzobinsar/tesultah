@@ -1,0 +1,104 @@
+body {
+  background-color: #FFF8DC;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 2%;
+  margin-top: 2%;
+  color: #FFD700;
+  font-style: italic;
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  text-align: right;
+  line-height: 1.6;
+  margin: 1rem;
+}
+
+div {
+  margin: 2rem auto;
+  max-width: 90%;
+}
+
+img {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.19);
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.content {
+  padding: 2%;
+}
+
+.first, .second, .third, .fourth {
+  text-align: center;
+  position: relative;
+}
+
+audio {
+  position: absolute;
+  left: 65%;
+  bottom: 20%;
+}
+
+.red {
+  color: red;
+  font-size: large;
+}
+
+.button {
+  display: block;
+  margin: 2rem auto;
+  color: black;
+  background-color: #FFD700;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: #FFD700;
+  background-color: white;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media (max-width: 575px) {
+  h1 {
+    padding-top: 8%;
+    font-size: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .first, .second, .third, .fourth {
+    margin-top: 8%;
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0.5rem auto;
+  }
+
+  .button {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+  }
+}
